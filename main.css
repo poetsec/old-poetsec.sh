@@ -64,7 +64,6 @@ body {
 
             #nav > ul > li > a {
                 border-radius: 5px;
-                color: #00F700;
                 text-decoration: none;
                 padding: 0.6em 1.2em 0.6em 1.2em;
 
@@ -113,7 +112,7 @@ b, strong {
 	}
 
     a {
-        color:white;
+        color:#00F700;
         text-decoration: none;
 
 		@media screen and (max-width: 1680px) {
@@ -145,5 +144,7 @@ b, strong {
 			.container {
 				width: calc(100% - 40px);
 			}
+        }
+    }
 
             
