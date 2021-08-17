@@ -137,6 +137,77 @@
                     </p>
                     <br>
                     <h2 style="color: #FD00FF;">While Loops</h2>
+                    <p>
+                        <ul>
+                            <li>When the execution reaches the end of a while statement's block, it jumps back to the start to re-check the condition.</li>
+                            <li>You can press <code style="color: #FF0677;">ctrl + c</code> to get out of an infinate loop.</li>
+                            <li>A break statement causes the program execution to immediately jump back to the start of the loop without re-checking the condition.</li>
+                            <li>A continue statement causes the execution to immediately jump back to the start of the loop and re-check the condition.</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <h2 style="color: #FD00FF;">For Loops</h2>
+                    <p>
+                        <ul>
+                            <li>For loops will loop a specific number of times.</li>
+                            <li>The <code style="color: #FF0677;">range()</code> function with a certain number will loop that number of times.</li>
+                            <li>With a <code style="color: #FF0677;">range()</code> function with two arguments, you can set a starting integer and an ending integer.</li>
+                            <li>The <code style="color: #FF0677;">range()</code> function called with three arguments includes a starting integer, an ending integer, and a step argument which is how much the for loop's variable increases each time.</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <h2 style="color: #FD00FF;">Functions</h2>
+                    <p>
+                        Python has built-in functions that all Python programs can call. These include <code style="color: #FF0677;">input()</code>, <code style="color: #FF0677;">len()</code>, and <code style="color: #FF0677;">print()</code>. Python also comes with a set of modules called the standard library. Each module is a Python program that includes related functions that can be used in Python programs. You must import a module with an import statement before you can use its functions.
+                    </p>
+                    <h3 style="color: #FD00FF;">Modules</h3>
+                    <p>
+                        <ul>
+                            <li>To call a function from a certain module, you must first import the module. For example, <code style="color: #FF0677;">import random</code>. Then, you must type the module name followed by a period to call the function, telling Python to look inside that module for the function. For example, <code style="color: #FF0677;">random.randint</code>. Randint isn't a built-in function and only exists in the random module, which is why you have to have the <code style="color: #FF0677;">random.</code> before the function name itself.</li>
+                            <li>You can import multiple modules in a line of code by seperating the module names with commas in the import statement. For example, <code style="color: #FF0677;">import random, sys, os, math</code>.</li>
+                            <li>Another way to import a module would be <code style="color: #FF0677;">from module_name import *</code>. The star tells Python to import everything. You would import a module this way so you don't have to type the <code style="color: #FF0677;">module_name.</code> before the function every time. However, using the full name makes for more readable code because you can see which module the function comes from.</li>
+                        </ul>
+                    </p>
+                    <h3 style="color: #FD00FF;">Third-Party Modules</h3>
+                    <p>
+                        <ul>
+                            <li>Python can also install third-party modules using the <code style="color: #FF0677;">pip</code> command.</li>
+                            <li><code style="color: #FF0677;">pip</code> must be run from the terminal/command-line.</li>
+                            <li>The third-party module pyperclip has <code style="color: #FF0677;">copy()</code> and <code style="color: #FF0677;">paste()</code> functions for reading and writing large amounts of text to and from teh clipboard.</li>
+                        </ul>
+                    </p>
+                    <h3 style="color: #FD00FF;">Writing Functions</h3>
+                    <p>
+                        <ul>
+                            <li>Functions are like mini programs inside of the program.</li>
+                            <li>The <code style="color: #FF0677;">def()</code> statement only defines a function. It does not execute the code inside of it, and will skip its block when the function is first defined. The code inside the function will only run when the function is called.</li>
+                            <li>The main purpose of functions is to define code that needs to be run multiple times into a group that can be easily called when needed.</li>
+                            <li>Using functions prevents the need to rewrite the same code over and over.</li>
+                            <li>Avoiding duplicating code is also useful when debugging and updating. Using a function makes it so only that function needs to be edited, and we don't have to search through the entire program to find each time we used that same block of code that needs to be changed.</li>
+                            <li>An argument is the value passed when calling a function. A parameter is the variable inside the function.</li>
+                            <li>Keyword arguments are often used for optimal arguments to pass to a function call. The <code style="color: #FF0677;">print()</code> function has the keyword arguments <code style="color: #FF0677;">end=</code> and <code style="color: #FF0677;">sep=</code>.</li>
+                            <li>Functions that return without a return statement return to the <code style="color: #FF0677;">None</code> value.</li>
+                        </ul>
+                    </p>
+                    <h3 style="color: #FD00FF;">Global and Local Scopes</h3>
+                    <p>
+                        <ul>
+                            <li>A variable in a function can have the same name as a variable outside of the function, but they are considered two seperate variables.</li>
+                            <li>Local variables are variables inside of a function i.e. in the local scope of the function. Global variables are variables in any area of the source code i.e. the global socpe of the code.</li>
+                            <li>Global and local scopes can be thought of as global and local containers. A variable can't be in both the global and local scopes.</li>
+                            <li>Local variables, or variables in the local scope, are forgotten when that function ends. So in a sense, local variables are temporary. They won't exist after the function returns.</li>
+                            <li>Code in a global scope can't use variables in the local scope, but code in a local scope can use global variables. Cod in one function's local scope cannot use functions in another function's local scope.</li>
+                            <li>If there is an assignment statement i.e. <code style="color: #FF0677;">count = 40</code> in the function, the variable is considered a local variable. If there is no assignment statement, it is considered a global variable.</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <h2 style="color: #FD00FF;">Handling Errors with Try and Except Statements</h2>
+                    <p>
+                        <ul>
+                            <li><code style="color: #FF0677;">try</code> and <code style="color: #FF0677;">except</code> statements can be used to keep a program running to completion instead of crashing entirely when an error is encountered.</li>
+                            <li>You can also have a simple <code style="color: #FF0677;">except</code> statement without specifying the error it catches, and it will catch all types of errors.</li>
+                        </ul>
+                    </p>
                 </article>
 
         </div>
